@@ -135,6 +135,22 @@
             letter-spacing: 0.5px;
         }
 
+        /* Видеоплеер */
+        .video-container {
+            width: 100%;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--card-border);
+            box-shadow: 0 10px 25px rgba(0, 242, 254, 0.15);
+            background: #000;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         /* Галерея картинок */
         .gallery-grid {
             display: grid;
@@ -313,6 +329,18 @@
         <img src="Gemini_Generated_Image_y2cx80y2cx80y2cx.png" alt="Подростки в VR">
         <div class="hero-overlay">
             <p style="color: #fff; font-size: 1.1rem; font-weight: 600;">Идеальное развлечение для компаний, вечеринок и семейного отдыха!</p>
+        </div>
+    </div>
+
+    <!-- Видеосекция -->
+    <div class="section">
+        <h2>🎬 Геймплей и нарезка игр</h2>
+        <p style="color: var(--text-muted); margin-bottom: 15px;">Посмотрите, как выглядят популярные VR-игры изнутри:</p>
+        <div class="video-container">
+            <video controls preload="metadata" poster="Gemini_Generated_Image_yoz581yoz581yoz5.png">
+                <source src="VR-Games2.mp4" type="video/mp4">
+                Ваш браузер не поддерживает воспроизведение видео.
+            </video>
         </div>
     </div>
 
