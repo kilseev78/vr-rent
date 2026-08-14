@@ -135,20 +135,25 @@
             letter-spacing: 0.5px;
         }
 
-        /* Видеоплеер */
+        /* Адаптивный видеоплеер (16:9) */
         .video-container {
-            width: 100%;
-            border-radius: 16px;
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
             overflow: hidden;
+            border-radius: 16px;
             border: 1px solid var(--card-border);
             box-shadow: 0 10px 25px rgba(0, 242, 254, 0.15);
             background: #000;
         }
 
-        .video-container video {
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            height: auto;
-            display: block;
+            height: 100%;
+            border: 0;
         }
 
         /* Галерея картинок */
@@ -336,10 +341,8 @@
     <div class="section">
         <h2>🎬 Геймплей и нарезка игр</h2>
         <p style="color: var(--text-muted); margin-bottom: 15px;">Посмотрите, как выглядят популярные VR-игры изнутри:</p>
-        <div class="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 16px;">
-            <!-- ВСТАВЬТЕ ВАШ IFRAME С RUTUBE СЮДА (пример ниже): -->
-           <iframe width="720" height="405" src="https://rutube.ru/play/embed/d51fed68460ae8703daceaf189c8b84e"
-                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;" 
+        <div class="video-container">
+            <iframe src="https://rutube.ru/play/embed/XXXXXXXXXX/" 
                     allow="clipboard-write; encrypted-media; fullscreen" 
                     allowfullscreen>
             </iframe>
